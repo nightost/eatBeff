@@ -1,0 +1,30 @@
+$base:12;
+html,body{
+	background: #000;
+	height: 100%;
+	margin: 0;
+	width: 100%;
+	position: relative;
+}
+body .wrapper{
+	width: 100%;
+	margin: 0 auto;
+	background: #fff;
+	height: 100%;
+	position: relative;
+	.bottom-desk{
+		position: absolute;
+		bottom: 0px;
+		left:0px;
+		width: 100%;
+		img{
+			width: 100%;
+		}
+	}
+}
+@media screen and(min-width: 370px){
+	body .wrapper{
+		width: 370px;
+		margin: 0 auto;
+	}
+}
