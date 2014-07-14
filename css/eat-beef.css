@@ -11,15 +11,83 @@ body .wrapper {
   background: #fff;
   height: 100%;
   position: relative; }
-  body .wrapper .bottom-desk {
+  body .wrapper .topbar {
+    text-align: right;
+    padding-top: 4%; }
+    body .wrapper .topbar span {
+      vertical-align: middle; }
+    body .wrapper .topbar .pro-icon {
+      width: 11.86441%;
+      display: inline-block; }
+    body .wrapper .topbar .pro-num {
+      color: #f00;
+      text-shadow: 0 0 6px #fff;
+      font-size: 1.25em; }
+    body .wrapper .topbar .progress-bar {
+      width: 33.61582%;
+      display: inline-block;
+      background: url(../images/eating/c16.png) no-repeat;
+      background-size: 100% 100%;
+      background-position: top left;
+      text-align: center;
+      font-size: 0px;
+      margin-left: 20px;
+      margin-right: 20px; }
+      body .wrapper .topbar .progress-bar .progress {
+        width: 100%;
+        margin: 0px; }
+  body .wrapper .bottom {
     position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%; }
-    body .wrapper .bottom-desk img {
+    body .wrapper .bottom .desk, body .wrapper .bottom .normal-part img {
       width: 100%; }
+    body .wrapper .bottom .player {
+      position: relative; }
+      body .wrapper .bottom .player .head {
+        position: absolute;
+        width: 74.57627%;
+        left: 50%;
+        margin-left: -37%;
+        top: -48%; }
+      body .wrapper .bottom .player .hands {
+        z-index: 400; }
+        body .wrapper .bottom .player .hands .left-hands {
+          position: absolute;
+          left: 0;
+          width: 51.69492%;
+          top: 25%; }
+        body .wrapper .bottom .player .hands .right-hands {
+          top: 33%;
+          position: absolute;
+          right: 0;
+          width: 51.69492%;
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+    body .wrapper .bottom .desk-box {
+      position: relative; }
+      body .wrapper .bottom .desk-box .steamer {
+        position: absolute;
+        left: 50%;
+        margin-left: -25%;
+        top: -153%;
+        width: 55.36723%;
+        z-index: 500; }
+      body .wrapper .bottom .desk-box .start-eat {
+        position: absolute;
+        left: 50%;
+        margin-left: -25%;
+        top: -75%;
+        width: 53.67232%;
+        z-index: 600; }
+      body .wrapper .bottom .desk-box .start-eat-hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2); }
 
 @media screen and (min-width: 370px) {
   body .wrapper {
-    width: 370px;
+    width: 354px;
     margin: 0 auto; } }

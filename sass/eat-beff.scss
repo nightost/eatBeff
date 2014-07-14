@@ -12,19 +12,102 @@ body .wrapper{
 	background: #fff;
 	height: 100%;
 	position: relative;
-	.bottom-desk{
+	.topbar{
+		text-align: right;
+		padding-top: 4%;
+		span{
+			vertical-align: middle;
+		}
+		.pro-icon{
+			width: (42/354)*100%;
+			display: inline-block;
+		}
+		.pro-num{
+			color: #f00;
+			text-shadow: 0 0 6px #fff;
+			font-size: (15/$base)+em;
+		}
+		.progress-bar{
+			width: (119/354)*100%;
+			display: inline-block;
+			background: url(../images/eating/c16.png) no-repeat;
+			background-size: 100% 100%;
+			background-position: top left;
+			text-align: center;
+			font-size: 0px;
+			margin-left: 20px;
+			margin-right: 20px;
+			.progress{
+				width: 100%;
+				margin: 0px;
+			}
+		}
+	}
+	.bottom{
 		position: absolute;
 		bottom: 0px;
 		left:0px;
 		width: 100%;
-		img{
+		.desk,.normal-part img{
 			width: 100%;
+		}
+		.player{
+			position: relative;
+			.head{
+				position: absolute;
+				width: (264/354)*100%;
+				left:50%;
+				margin-left: -37%;
+				top: -48%;
+			}
+			.hands{
+				z-index: 400;
+				.left-hands{
+					position: absolute;
+					left:0;
+					width: (183/354)*100%;
+					top:25%;
+				}
+				.right-hands{
+					top:33%;
+					position: absolute;
+					right: 0;
+					width: (183/354)*100%;
+					-webkit-transform: rotateY(180deg);
+					-moz-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+				}
+			}
+		}
+		.desk-box{
+			position: relative;
+			.steamer{
+				position: absolute;
+				left: 50%;
+				margin-left: -25%;
+				top: -153%;
+				width: (196/354)*100%;
+				z-index:500;
+			}
+			.start-eat{
+				position: absolute;
+				left: 50%;
+				margin-left: -25%;
+				top: -75%;
+				width: (190/354)*100%;
+				z-index:600; 
+			}
+			.start-eat-hover{
+				-webkit-transform: scale(1.2);
+				-moz-transform: scale(1.2);
+				transform:  scale(1.2);
+			}
 		}
 	}
 }
 @media screen and(min-width: 370px){
 	body .wrapper{
-		width: 370px;
+		width: 354px;
 		margin: 0 auto;
 	}
 }

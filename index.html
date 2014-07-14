@@ -7,14 +7,41 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 <meta content="telephone=no" name="format-detection"/>
 <title>吃牛肉</title>
+<script type="text/javascript" src="js/zepto.min.js"></script>
 <script type="text/javascript" src="js/eatBeef.js"></script>
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/eat-beef.css">
 </head>
 <body>
 	<div class="wrapper">
-		<div class="bottom-desk">
-			<img src="images/bottom-bg.png" alt="">
+		<div class="topbar">
+			<img class="pro-icon" src="images/eating/c14.png" />
+			<span class="pro-num">x 0</span>
+			<div class="progress-bar"><img class="progress" src="images/eating/c17.png" alt="" /></div>
+		</div>
+		
+		<div class="bottom">
+			<div class="player">
+				<div class="normal-part">
+					<img src="images/eating/c25.png" class="head" alt="" />
+					<img src="images/eating/c21.png" class="body" alt="" />
+				</div>
+				<div class="hands">
+					<div class="step-1">
+						<img src="images/eating/c31.png"  class="left-hands" alt="" />
+						<img src="images/eating/c35.png"  class="right-hands" alt="" />
+					</div>
+					<div class="step-2" style="display:none">
+						<img src="images/eating/c31.png"  class="left-hands" alt="" />
+						<img src="images/eating/c31.png"  class="right-hands" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="desk-box">
+				<img src="images/bottom-bg.png" alt="" class="desk"/>
+				<img src="images/eating/c6.png" class="steamer" alt="" />
+				<img src="images/eating/c29.png" alt="" class="start-eat"/>
+			</div>
 		</div>
 	</div>
 </body>
