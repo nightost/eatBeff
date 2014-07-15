@@ -57,15 +57,21 @@ body .wrapper {
           position: absolute;
           left: 0;
           width: 51.69492%;
+          top: 36%; }
+        body .wrapper .bottom .player .hands .left-hands-1 {
+          top: 33%; }
+        body .wrapper .bottom .player .hands .left-hands-2 {
           top: 25%; }
         body .wrapper .bottom .player .hands .right-hands {
-          top: 33%;
+          top: 34%;
           position: absolute;
           right: 0;
           width: 51.69492%;
           -webkit-transform: rotateY(180deg);
           -moz-transform: rotateY(180deg);
           transform: rotateY(180deg); }
+        body .wrapper .bottom .player .hands .right-hands-1 {
+          top: 25%; }
     body .wrapper .bottom .desk-box {
       position: relative; }
       body .wrapper .bottom .desk-box .steamer {
