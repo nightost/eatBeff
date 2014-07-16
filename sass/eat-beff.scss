@@ -6,7 +6,7 @@ html,body{
 	width: 100%;
 	position: relative;
 }
-body .wrapper{
+.wrapper{
 	width: 100%;
 	margin: 0 auto;
 	background: #fff;
@@ -15,6 +15,7 @@ body .wrapper{
 	.topbar{
 		text-align: right;
 		padding-top: 4%;
+		height: 5%;
 		span{
 			vertical-align: middle;
 		}
@@ -33,13 +34,18 @@ body .wrapper{
 			background: url(../images/eating/c16.png) no-repeat;
 			background-size: 100% 100%;
 			background-position: top left;
-			text-align: center;
+			text-align: left;
 			font-size: 0px;
 			margin-left: 20px;
 			margin-right: 20px;
+			height: 35%;
 			.progress{
 				width: 100%;
 				margin: 0px;
+				height: 100%;
+				img{
+					height: 100%;
+				}
 			}
 		}
 	}
@@ -59,6 +65,18 @@ body .wrapper{
 				left:50%;
 				margin-left: -37%;
 				top: -48%;
+			}
+			.state-1{
+				position: absolute;
+				top: -44%;
+			}
+			.state-2{
+				position: absolute;
+				top: -44%;
+			}
+			.state-3{
+				position: absolute;
+				top: -44%;
 			}
 			.hands{
 				z-index: 400;
@@ -94,7 +112,7 @@ body .wrapper{
 				position: absolute;
 				left: 50%;
 				margin-left: -25%;
-				top: -153%;
+				top: -180%;
 				width: (196/354)*100%;
 				z-index:500;
 			}
@@ -102,9 +120,11 @@ body .wrapper{
 				position: absolute;
 				left: 50%;
 				margin-left: -25%;
-				top: -75%;
+				top: -29%;
 				width: (190/354)*100%;
-				z-index:600; 
+				z-index:600;
+				opacity: .7;
+				filter:alpha(opacity=70); 
 			}
 			.start-eat-hover{
 				-webkit-transform: scale(1.2);
@@ -114,9 +134,84 @@ body .wrapper{
 		}
 	}
 }
+.result-box{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	width: 100%;
+	z-index: 1000;
+	.bg{
+		position: absolute;
+		top:0px;
+		bottom: 0px;
+		width: 100%;
+		background: #000;
+		opacity: .5;
+		filter:alpha(opacity=50);
+
+	}
+	.share{
+		position: absolute;
+		right: 10%;
+		top:10%;
+		width: 40%;
+	}
+	.result-info{
+		width: 80%;
+		position: absolute;
+		left: 50%;
+		margin-left: -25%;
+		padding: 10% 5%;
+		top:50%;
+		margin-left: -44%;
+		height: 13%;
+		background: url(../images/finished/c20.png) no-repeat;
+		background-size: 100% 100%;
+		font-size: 1.5em;
+	}
+	.again{
+		width: 42%;
+		position: absolute;
+		left: 50%;
+		margin-left: -25%;
+		top:80%;
+
+	}
+	.point-hand{
+		position: absolute;
+		width: 7%;
+		left: 66%;
+		top: 17%;
+		animation:handshake .8s ease-out infinite;
+		-moz-animation:handshake .8s ease-out infinite;
+		-webkit-animation:handshake .8s ease-out infinite;
+	}
+	
+}
 @media screen and(min-width: 370px){
 	body .wrapper{
 		width: 354px;
 		margin: 0 auto;
 	}
+}
+@keyframes handshake{
+	0%   {top:17%;}
+	25%  {top:18%;}
+	50%  {top:19%;}
+	75%  {top:18%;}
+	100% {top:17%;}
+}
+@-webkit-keyframes handshake{
+	0%   {top:17%;}
+	25%  {top:18%;}
+	50%  {top:19%;}
+	75%  {top:18%;}
+	100% {top:17%;}
+}
+@-moz-keyframes handshake{
+	0%   {top:17%;}
+	25%  {top:18%;}
+	50%  {top:19%;}
+	75%  {top:18%;}
+	100% {top:17%;}
 }
