@@ -1,6 +1,8 @@
 //参数配置
+var _eatBeef;
 $(function(){
-	var _eatBeef=new eatBeef({maxTime:15});
+	_eatBeef=new eatBeef({maxTime:15});
+	// _eatBeef.getNum();
 });
 /**
  * [eatBeff description]
@@ -14,13 +16,16 @@ function eatBeef(obj){
 	var _eatNum=0;
 	var _eatBtn=$(".start-eat");
 	var _this=this;
+	this.getNum=function(){
+		return _eatNum;
+	};
 	try{
 		var _maxTime=_arg.maxTime;
 	}
 	catch(e){
 		console.log("Error:"+e);
 	}
-	var _eatBeff={};
+	
 	this.init=function(){
 		//点击我吃
 		_eatBtn.bind("touchstart mousedown",function(){
@@ -140,8 +145,12 @@ function eatBeef(obj){
 			thisObj.chatStr = "你吃了" + _eatNum + "个牛肉。你这么吊，你爸妈知道么？";
 			showMotion(3);
 		}
-		else if(140<_eatNum){
-			thisObj.chatStr = "你肯定作弊了！！";
+		else if(140<_eatNum&&_eatNum<=170){
+			thisObj.chatStr = _eatNum +"个？？人类已经无法阻止你吃牛肉了！！";
+			showMotion(3);
+		}
+		else if(170<_eatNum){
+			thisObj.chatStr = _eatNum +"个？？你确定你没作弊？？？";
 			showMotion(3);
 		}
 		shareStr = "我在《吃牛肉大赛》中吃掉了" + _eatNum + "个牛肉，求打败求刺激~";
@@ -171,8 +180,8 @@ function eatBeef(obj){
 	function hideResultInfo(){
 		// result-box
 	}
+	
 	this.init();
-	return _eatBeff;
 }
 /**
 *show hands
@@ -185,10 +194,11 @@ function showHands(laststep,index){
 }
 function showheads(index){
 	var heads={
-		head1:"images/eating/c25.png",
-		head2:"images/eating/c27.png",
-		head3:"images/eating/c26.png",
-		head4:"images/eating/c28.png"
+		head1:"static/events/images/eating/c25.png",
+		head2:"static/events/images/eating/c27.png",
+		head3:"static/events/images/eating/c26.png",
+		head4:"static/events/images/eating/c28.png"
 	};
 	$(".head").attr("src",heads["head"+index]);
 }
+//初始化分享内容的函数
