@@ -59,6 +59,7 @@ html,body{
 		}
 		.player{
 			position: relative;
+			bottom: -3em;
 			.head{
 				position: absolute;
 				width: (264/354)*100%;
@@ -77,6 +78,11 @@ html,body{
 			.state-3{
 				position: absolute;
 				top: -44%;
+			}
+			.time-up{
+				position: absolute;
+				top: 48%;
+				z-index: 800;
 			}
 			.hands{
 				z-index: 400;
@@ -180,38 +186,43 @@ html,body{
 	.point-hand{
 		position: absolute;
 		width: 7%;
-		left: 66%;
-		top: 17%;
+		left: 91%;
+		top: 12%;
 		animation:handshake .8s ease-out infinite;
 		-moz-animation:handshake .8s ease-out infinite;
 		-webkit-animation:handshake .8s ease-out infinite;
 	}
-	
 }
-@media screen and(min-width: 370px){
+@media screen and(min-device-width: 320px){
 	body .wrapper{
-		width: 354px;
+		width: 320px;
+		margin: 0 auto;
+	}
+}
+@media screen and(device-width: 320px){
+	body .wrapper{
+		width: 240px;
 		margin: 0 auto;
 	}
 }
 @keyframes handshake{
-	0%   {top:17%;}
-	25%  {top:18%;}
-	50%  {top:19%;}
-	75%  {top:18%;}
-	100% {top:17%;}
+	0%   {top:12%;}
+	25%  {top:11%;}
+	50%  {top:10%;}
+	75%  {top:11%;}
+	100% {top:12%;}
 }
 @-webkit-keyframes handshake{
-	0%   {top:17%;}
-	25%  {top:18%;}
-	50%  {top:19%;}
-	75%  {top:18%;}
-	100% {top:17%;}
+	0%   {top:12%;}
+	25%  {top:11%;}
+	50%  {top:10%;}
+	75%  {top:11%;}
+	100% {top:12%;}
 }
 @-moz-keyframes handshake{
-	0%   {top:17%;}
-	25%  {top:18%;}
-	50%  {top:19%;}
-	75%  {top:18%;}
-	100% {top:17%;}
+	0%   {top:12%;}
+	25%  {top:11%;}
+	50%  {top:10%;}
+	75%  {top:11%;}
+	100% {top:12%;}
 }

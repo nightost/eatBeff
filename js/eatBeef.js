@@ -31,7 +31,7 @@ function eatBeef(obj){
 		});
 		//吃牛肉的循环逻辑
 		_eatBtn.data("step",1);
-		_eatBtn.bind("click",function(){
+		_eatBtn.bind("touchstart click",function(){
 			//开始计时
 			if(!_startFlag){
 				_startFlag=true;
@@ -67,6 +67,9 @@ function eatBeef(obj){
 			}
 			//计数
 			_eatNum++;
+			if(_eatNum>15){
+				$(".steamer").attr("src",$(".steamer").attr("data-src1"));
+			}
 			$(".pro-num").text(_eatNum);
 		});
 	}
@@ -86,8 +89,13 @@ function eatBeef(obj){
 	 */
 	function countResult(obj){
 		//unbind fns
+		$(".steamer").attr("src",$(".steamer").attr("data-src2"));
 		_eatBtn.unbind("click touchstart touchend mouseup mousedown");
-		showResultInfo(obj);
+		$(".time-up").show();
+		//显示time up
+		setTimeout(function(){
+			showResultInfo(obj);
+		},2000);
 	}
 	/**
 	 * [showResultInfo description]
@@ -97,46 +105,46 @@ function eatBeef(obj){
 		// result-box
 		// result-box
 		if(_eatNum<=20){
-			thisObj.chatStr = _eatNum + "个粽子不过瘾，苏州人必须得牛逼！！";
+			thisObj.chatStr = _eatNum + "块牛肉不过瘾，咋们必须得牛逼！！";
 			showMotion(1);
 		}
 		else if(20<_eatNum&&_eatNum<=35){
-			thisObj.chatStr = "我勒个去，你只吃了" + _eatNum + "个粽子，太慢了吧！";
+			thisObj.chatStr = "我勒个去，你只吃了" + _eatNum + "个牛肉，太慢了吧！";
 			showMotion(1);
 		}
 		else if(35<_eatNum&&_eatNum<=50){
-			thisObj.chatStr = "胃口不错，一口气吃" + _eatNum + "个，吃完粽子记得喝碗汤";
+			thisObj.chatStr = "胃口不错，一口气吃" + _eatNum + "个，吃完牛肉记来碗汤";
 			showMotion(2);
 		}
 		else if(50<_eatNum&&_eatNum<=65){
-			thisObj.chatStr = "万万没有想到！你吃了" + _eatNum + "个粽子！放开吃，吃完哥请你喝肉饼汤！";
+			thisObj.chatStr = "万万没有想到！你吃了" + _eatNum + "个牛肉！放开吃，吃完哥请你喝牛肉汤！";
 			showMotion(2);
 		}
 		else if(65<_eatNum&&_eatNum<=80){
-			thisObj.chatStr = "你吃了" + _eatNum + "个粽子，看样子你根本停不下来，加油，再来一次更牛的！！";
+			thisObj.chatStr = "你吃了" + _eatNum + "个牛肉，看样子你根本停不下来，加油，再来一次更牛的！！";
 			showMotion(2);
 		}
 		else if(80<_eatNum&&_eatNum<=95){
-			thisObj.chatStr = "你吃了" + _eatNum + "个粽子，这样的速度，标准的一吃货啊，有潜质 ！";
+			thisObj.chatStr = "你吃了" + _eatNum + "个牛肉，这样的速度，标准的一吃货啊！！ ！";
 			showMotion(3);
 		}
 		else if(95<_eatNum&&_eatNum<=110){
-			thisObj.chatStr = "你吃了" + _eatNum + "个粽子，我看你天赋异禀、骨骼惊奇，想来是百年难得一见的吃货奇才！";
+			thisObj.chatStr = "你吃了" + _eatNum + "个牛肉，我看你天赋异禀、骨骼惊奇，想来是百年难得一见的吃货奇才！";
 			showMotion(3);
 		}
 		else if(110<_eatNum&&_eatNum<=125){
-			thisObj.chatStr = "我勒个去，你吃了" + _eatNum + "个粽子…说点什么好？记得吃药…。";
+			thisObj.chatStr = "我勒个去，你吃了" + _eatNum + "个牛肉…说点什么好？记得吃药…。";
 			showMotion(3);
 		}
 		else if(125<_eatNum&&_eatNum<=140){
-			thisObj.chatStr = "你吃了" + _eatNum + "个粽子，这么快的速度，你爸妈知道么";
+			thisObj.chatStr = "你吃了" + _eatNum + "个牛肉。你这么吊，你爸妈知道么？";
 			showMotion(3);
 		}
 		else if(140<_eatNum){
 			thisObj.chatStr = "你肯定作弊了！！";
 			showMotion(3);
 		}
-		shareStr = "我在《吃牛肉大赛》中吃掉了" + _eatNum + "个粽子，求打败求刺激~";
+		shareStr = "我在《吃牛肉大赛》中吃掉了" + _eatNum + "个牛肉，求打败求刺激~";
 		$(".start-eat").hide();
 		$(".result-box .result-info").text(thisObj.chatStr);
 		$(".result-box").show();
